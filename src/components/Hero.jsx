@@ -19,7 +19,7 @@ const Hero = () => {
 
           <div className="flex gap-4 mt-8">
             <button className="bg-green-600 text-white px-7 py-3 rounded-xl shadow-lg hover:bg-green-700">
-              Ask Question
+              Talk to CropCare AI
             </button>
 
             <button className="border border-green-600 px-7 py-3 rounded-xl hover:bg-green-50">

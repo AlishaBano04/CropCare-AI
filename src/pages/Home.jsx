@@ -1,15 +1,18 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import FeatureCards from "../components/FeatureCards";
-import Chatbox from "../components/Chatbox";
+import Footer from "../components/Footer";
+import About from "../components/About";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
       <Hero />
+      <About />
       <FeatureCards />
-      <Chatbox />
+
+      <Footer />
     </div>
   );
 };
