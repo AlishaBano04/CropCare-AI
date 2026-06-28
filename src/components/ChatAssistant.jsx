@@ -1,66 +1,49 @@
 function ChatAssistant() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-green-100">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-green-700 to-emerald-500 text-white py-8 shadow-lg">
-        <div className="max-w-6xl mx-auto px-6">
-          <h1 className="text-4xl font-bold">🤖 CropCare AI Assistant</h1>
-
-          <p className="mt-2 text-green-100">Your Smart Farming Companion</p>
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto px-6 py-12">
-        {/* Suggestion Cards */}
-        <div className="grid md:grid-cols-4 gap-6 mb-10">
-          <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-            <h3 className="font-semibold text-green-700">🌿 Detect Disease</h3>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-            <h3 className="font-semibold text-green-700">🌾 Crop Advice</h3>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-            <h3 className="font-semibold text-green-700">💧 Irrigation Tips</h3>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
-            <h3 className="font-semibold text-green-700">🐛 Pest Control</h3>
-          </div>
+    <div className="h-[calc(100vh-90px)] bg-gray-100 p-3">
+      <div className="max-w-5xl mx-auto h-full bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden">
+        {/* Header */}
+        <div className="border-b px-5 py-3">
+          <h1 className="text-lg font-semibold text-green-700">
+            CropCare AI Assistant
+          </h1>
         </div>
 
-        {/* Chat Container */}
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
-          {/* Chat Header */}
-          <div className="bg-green-600 text-white p-5">
-            <h2 className="font-semibold text-lg">CropCare Assistant</h2>
-          </div>
-
-          {/* Messages Area */}
-          <div className="h-[500px] p-6 bg-gray-50">
-            <div className="flex mb-4">
-              <div className="bg-green-100 p-4 rounded-2xl max-w-md">
-                👋 Hello! I am CropCare AI. How can I help you today?
-              </div>
-            </div>
-
-            <div className="flex justify-end">
-              <div className="bg-green-600 text-white p-4 rounded-2xl max-w-md">
-                Tell me about crop diseases.
-              </div>
+        {/* Chat Messages */}
+        <div className="flex-1 overflow-y-auto bg-gray-50 p-5">
+          {/* AI Message */}
+          <div className="mb-4">
+            <div className="inline-block bg-white border border-gray-200 px-4 py-2 rounded-2xl shadow-sm text-sm text-gray-800">
+              👋 Hello! How can I help you today?
             </div>
           </div>
 
-          {/* Input Area */}
-          <div className="p-4 border-t flex gap-3">
+          {/* User Message */}
+          <div className="flex justify-end mb-4">
+            <div className="bg-green-600 text-white px-4 py-2 rounded-2xl text-sm max-w-md">
+              Tell me about crop diseases.
+            </div>
+          </div>
+
+          {/* AI Response */}
+          <div className="mb-4">
+            <div className="inline-block bg-white border border-gray-200 px-4 py-2 rounded-2xl shadow-sm text-sm text-gray-800 max-w-xl">
+              Crop diseases can reduce crop yield and quality. Early detection
+              and proper treatment help farmers protect their crops.
+            </div>
+          </div>
+        </div>
+
+        {/* Fixed Input */}
+        <div className="border-t bg-white p-3">
+          <div className="flex gap-2">
             <input
               type="text"
-              placeholder="Ask a farming question..."
-              className="flex-1 border rounded-xl px-4 py-3 focus:outline-none"
+              placeholder="Ask your farming question..."
+              className="flex-1 border border-gray-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
             />
 
-            <button className="bg-green-600 text-white px-6 rounded-xl hover:bg-green-700">
+            <button className="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition">
               Send
             </button>
           </div>

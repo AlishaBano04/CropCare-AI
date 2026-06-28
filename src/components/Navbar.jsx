@@ -12,6 +12,10 @@ const Navbar = () => {
             Home
           </a>
 
+          <a href="/library" className="hover:text-green-600 transition">
+            Library
+          </a>
+
           <a href="/" className="hover:text-green-600 transition">
             About
           </a>
